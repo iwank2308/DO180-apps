@@ -1,0 +1,5 @@
+mkdir -pv /var/local/mysql 2>/dev/null
+sudo semanage fcontext -a -t container_file_t '/var/local/mysql(/.*)?' 2>/dev/null
+sudo restorecon -R /var/local/mysql 
+
+
